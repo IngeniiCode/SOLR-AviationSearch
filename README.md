@@ -1,2 +1,5 @@
-# SOLR-AviationSearch
-Aviation Search based on Solr 
+# Aviation Search (Solr)
+
+## _Work in Progress_
+
+
