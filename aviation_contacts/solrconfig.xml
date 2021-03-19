@@ -180,6 +180,33 @@
     </lst>
   </requestHandler>
 
+  <!-- A request handler that returns indented JSON by default -->
+  <requestHandler name="/contacts" class="solr.SearchHandler">
+    <lst name="defaults">
+      <str name="echoParams">explicit</str>
+      <str name="wt">json</str>
+      <str name="indent">true</str>
+    </lst>
+    <lst name="appends">
+      <str name="fl">icao,callsign,milCallsign</str>
+    </lst>
+  </requestHandler>
+
+
+  <!-- A request handler that returns indented JSON by default -->
+  <requestHandler name="/milcontacts" class="solr.SearchHandler">
+    <lst name="defaults">
+      <str name="echoParams">explicit</str>
+      <str name="wt">json</str>
+      <str name="indent">true</str>
+    </lst>
+    <lst name="appends">
+        <str name="fl">icao,callsign,milCallsign</str>
+        <str name="fq">milCallsign:true</str>
+    </lst>
+  </requestHandler>
+
+
   <initParams path="/update/**,/query,/select,/spell">
     <lst name="defaults">
       <str name="df">_text_</str>

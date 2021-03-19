@@ -447,16 +447,20 @@
       <tokenizer class="solr.WhitespaceTokenizerFactory"/>
     </analyzer>
   </fieldType>
+  <field name="_text_" type="text_en" uninvertible="false" indexed="false" stored="true"/>
   <field name="_version_" type="plong" indexed="false" stored="false"/>
   <field name="aircraftDbId" type="plongs"/>
   <field name="altitude" type="plongs"/>
   <field name="bearing" type="pdoubles"/>
   <field name="callsign" type="text_general" uninvertible="true" indexed="true" required="true" stored="true"/>
+  <field name="delete" type="text_general"/>
+  <field name="detectedTimestamp" type="pdate" uninvertible="true" indexed="true" stored="true"/>
   <field name="distance" type="pdoubles"/>
   <field name="emergency" type="booleans"/>
   <field name="flightDbId" type="plongs"/>
   <field name="icao" type="string" uninvertible="true" indexed="true" required="true" stored="true"/>
   <field name="id" type="string" multiValued="false" indexed="true" required="true" stored="true"/>
+  <field name="lastReport" type="plongs"/>
   <field name="latitude" type="pdoubles"/>
   <field name="longitude" type="pdoubles"/>
   <field name="messageLoggedDate" type="text_general"/>
@@ -465,7 +469,9 @@
   <field name="messageReceiveTime" type="pdate" uninvertible="true" indexed="true" stored="true"/>
   <field name="milCallsign" type="booleans"/>
   <field name="msgType" type="plongs"/>
+  <field name="newContact" type="booleans"/>
   <field name="onGround" type="booleans"/>
+  <field name="resolution" type="plongs"/>
   <field name="sessionId" type="plongs"/>
   <field name="speedGround" type="pdoubles"/>
   <field name="spiIdent" type="booleans"/>
@@ -547,4 +553,5 @@
   <copyField source="messageLoggedTime" dest="messageLoggedTime_str" maxChars="256"/>
   <copyField source="transmissionType" dest="transmissionType_str" maxChars="256"/>
   <copyField source="messageLoggedDate" dest="messageLoggedDate_str" maxChars="256"/>
+  <copyField source="delete" dest="delete_str" maxChars="256"/>
 </schema>
