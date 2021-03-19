@@ -1,4 +1,7 @@
 # Do not watch data directories
 */data
 solr/*
+<<<<<<< HEAD
 up
+=======
+>>>>>>> c35ae50ac3efc854d3541b787bc7a625f619c3e3

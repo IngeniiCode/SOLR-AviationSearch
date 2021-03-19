@@ -206,7 +206,6 @@
     </lst>
   </requestHandler>
 
-
   <initParams path="/update/**,/query,/select,/spell">
     <lst name="defaults">
       <str name="df">_text_</str>
